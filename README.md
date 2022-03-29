@@ -40,4 +40,10 @@ In PostMan Body Give Input
      "age": 21,
      "jobtitle": "Student"
   }
+```
+
+## Demo-Video
+https://user-images.githubusercontent.com/80918746/160616718-88e7d14a-74a1-419e-b36e-083fdf337bd9.mp4
+
+
 
