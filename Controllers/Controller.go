@@ -16,12 +16,14 @@ func RegisterUser(writer http.ResponseWriter, req *http.Request) {
 	Models.Users = append(Models.Users, newUser)
 	json.NewEncoder(writer).Encode(newUser)
 }
+
 func GetAllUsers(writer http.ResponseWriter, req *http.Request) {
 	writer.Header().Set("Content-Type", "application/json")
 	if err := json.NewEncoder(writer).Encode(Models.Users); err != nil {
 		return
 	}
 }
+
 func GetUserForUserId(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	params := mux.Vars(r)
@@ -34,6 +36,7 @@ func GetUserForUserId(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 }
+
 func DeleteUserForId(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	params := mux.Vars(r) // returns arg parameters
@@ -44,6 +47,7 @@ func DeleteUserForId(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 }
+
 func UpdateUserForId(w http.ResponseWriter, r *http.Request) {
 	// Delete the user than add a new user
 	w.Header().Set("Content-Type", "application/json")
