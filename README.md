@@ -20,7 +20,9 @@ DELETE /deleteUser/{id}
 ### Register a User
 ``` bash
 POST /register
+```
 
+``` bash
 In PostMan Body Give Input 
   {
      "username": "@sahij.akshat",
@@ -33,6 +35,9 @@ In PostMan Body Give Input
 ### Update a Particular User For UserID
 ``` bash
 PUT /updateUser/{id}
+``` 
+
+``` bash
 In PostMan Body Give Input 
   {
      "username": "@sahij.akshat",
